@@ -2,39 +2,53 @@
 
 using namespace std;
 
-class Number {
+class Num2;
+
+class Num1 {
 private:
-    double a, b, c;
+    double n;
 
 public:
-    Number(double num1, double num2, double num3) : a(num1), b(num2), c(num3) {}
+    Num1(double num1) : n(num1) {}
 
-    friend double Greatest(Number &n);
+    friend double Greatest(Num1 &n, Num2 &m);
 };
 
-double Greatest(Number &n) {
+class Num2 {
+private:
+    double n;
+
+public:
+    Num2(double num2) : n(num2) {}
+
+    friend double Greatest(Num1 &n, Num2 &m);
+};
+
+double Greatest(Num1 &n, Num2 &m) {
     double greatest;
 
-    if (n.a >= n.b || n.a >= n.c) {
-        greatest = n.a;
-    } else if (n.b >= n.a || n.b >= n.c) {
-        greatest = n.b;
+    if (n.n >= m.n) {
+        greatest = n.n;
     } else {
-        greatest = n.c;
+        greatest = m.n;
     }
 
     return greatest;
 }
 
 int main() {
-    double num1, num2, num3;
+    double num1, num2;
 
-    cout << "Enter three numbers: ";
-    cin >> num1 >> num2 >> num3;
+    cout << "Enter the first number: ";
+    cin >> num1;
 
-    Number num(num1, num2, num3);
-    double result = Greatest(num);
-    cout << "The greatest number is: " << result << endl;
+    cout << "Enter the second number: ";
+    cin >> num2;
+
+    Num1 n1(num1);
+    Num2 n2(num2);
+
+    cout << "The greatest number is: " << Greatest(n1, n2) << endl;
 
     return 0;
 }
