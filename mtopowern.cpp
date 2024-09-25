@@ -4,7 +4,15 @@ using namespace std;
 
 class PowerCalc {
 public:
-    double Power(double m, int n = 2) {
+    double Power(double m) {
+        int n = 2;
+        double pow = 1.0;
+        for (int i = 0; i < n; i++) {
+            pow = pow * m;
+        }
+        return pow;
+    }
+    double Power(double m, int n) {
         double pow = 1.0;
         for (int i = 0; i < n; i++) {
             pow = pow * m;
@@ -24,14 +32,13 @@ int main() {
     if(c==1){
         cout << "Enter an integer value for n: ";
         cin >> n;
-        PowerCalc power;
-        result = power.Power(m, n);
+        PowerCalc p;
+        result = p.Power(m, n);
+    }else{
+        PowerCalc p;
+        result = p.Power(m);
     }
-    else{
-        PowerCalc power;
-        result = power.Power(m);
-    }
-    cout << result << endl;
+    cout << "The result is: " << result << endl;
 
     return 0;
 }

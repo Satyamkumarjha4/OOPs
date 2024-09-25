@@ -38,7 +38,6 @@ int main() {
     Fibonacci fCopy = f;
 
     f.series(n);
-    fCopy.series(n);
 
     return 0;
 }

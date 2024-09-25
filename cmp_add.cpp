@@ -34,22 +34,26 @@ public:
 };
 
 int main(){
-    float r1, i1, r2, i2;
+    float r1, i1, c;
     cout << "Enter the real and imaginary parts of the first complex number: ";
     cin >> r1 >> i1;
     cout << "The first complex number is: ";
     Complex c1(r1, i1);
     c1.display();
 
-    cout << "Enter the real and imaginary parts of the second complex number: ";
-    cin >> r2 >> i2;
+    cout << "Enter the value for the second complex number: ";
+    cin >> c;
     cout << "The second complex number is: ";
-    Complex c2(r2, i2);
+    Complex c2(c);
     c2.display();
+
+    Complex c3;
+    cout << "The third complex number is: ";
+    c3.display();
 
     Complex sum;
     sum = c1.add(c2);
-    cout << "The sum of the two complex numbers is: ";
+    cout << "The sum of the two complex numbers is: "<<endl<<"   ";
     c1.display();
     cout << " + ";
     c2.display();

@@ -40,7 +40,7 @@ public:
         cout << "Name: " << name << endl;
         cout << "Branch: " << branch << endl;
         cout << "Roll number: " << roll << endl;
-        cout << "Age: " << age << endl
+        cout << "Age: " << age << endl;
         cout << "Sex: " << sex << endl;
         cout << "Percentage: " << percentage() << endl;
     }

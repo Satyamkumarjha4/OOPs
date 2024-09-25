@@ -15,12 +15,13 @@ double area(int b, int h){
 
 
 int main(){
-    int r, l, b, h, w;
+    int r, h, b;
+    double l, w;
     cout << "Enter the radius of the circle: ";
     cin >> r;
     cout << "The area of the circle is: " << area(r) << endl;
 
-    cout << "Enter the length and breadth of the rectangle: ";
+    cout << "Enter the length and breadth of the rectangle(enter double value): ";
     cin >> l >> w;
     cout << "The area of the rectangle is: " << area(l, w) << endl;
 
