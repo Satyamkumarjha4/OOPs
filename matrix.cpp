@@ -75,10 +75,12 @@ int main() {
 
     cout << "Enter elements of the first matrix:\n";
     mat1.inputMatrix();
+    mat1.displayMatrix();
 
     cout << "Enter elements of the second matrix:\n";
     mat2.inputMatrix();
-
+    mat2.displayMatrix();
+    
     Matrix result = mat1.multiply(mat2);
 
     cout << "The product of the matrices is:\n";

@@ -6,6 +6,8 @@ private:
     string name;
     string branch;
     int roll;
+    int age;
+    char sex;
     float marks[5];
 
 public:
@@ -16,6 +18,10 @@ public:
         cin >> branch;
         cout << "Enter the roll number of the student: ";
         cin >> roll;
+        cout << "Enter the age of the student: ";
+        cin >> age;
+        cout<< "Enter the sex(M/F) of the student: ";
+        cin>>sex;
         for (int i = 0; i < 5; i++) {
             cout << "Enter the marks of subject " << i + 1 << ": ";
             cin >> marks[i];
@@ -34,6 +40,8 @@ public:
         cout << "Name: " << name << endl;
         cout << "Branch: " << branch << endl;
         cout << "Roll number: " << roll << endl;
+        cout << "Age: " << age << endl
+        cout << "Sex: " << sex << endl;
         cout << "Percentage: " << percentage() << endl;
     }
 };
