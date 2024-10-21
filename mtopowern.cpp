@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 class PowerCalc {
 public:
     double Power(double m, int n=2) {
@@ -12,7 +10,6 @@ public:
         return pow;
     }
 };
-
 int main() {
     double m;
     int n,c;

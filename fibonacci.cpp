@@ -4,7 +4,6 @@ using namespace std;
 class Fibonacci {
 private:
     int a, b;
-
 public:
     Fibonacci() {
         a = 1;
@@ -17,13 +16,12 @@ public:
     }
 
     void series(int n) {
-        int i, next;
-        cout << "\nFibonacci Series: \n";
-        for (i = 0; i < n; i++) {
-            cout << a << " ";
-            next = a + b;
-            a = b;
-            b = next;
+        int t1 = a, t2 = b, next;
+        for (int i = 0; i < n; i++) {
+            cout << t1 << " ";
+            next = t1 + t2;
+            t1 = t2;
+            t2 = next;
         }
         cout << endl;
     }
@@ -32,13 +30,10 @@ public:
 int main() {
     Fibonacci f;
     int n;
-    cout << "Enter the number of terms in the Fibonacci series: ";
+    cout << "Enter the number of terms: ";
     cin >> n;
-
     Fibonacci fCopy = f;
-
     f.series(n);
-    
-
+    fCopy.series(n);
     return 0;
 }
